@@ -14,7 +14,18 @@ This will help you get started with your code!
     <title>Module 4 Lab</title>
 </head>
 <body>
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
 <div class = "container-lg">
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+
     <nav class="navbar bg-dark text-white p-3 my-3 ">
         <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to my Physiotherapy Clinic</h1>
     </nav>
@@ -24,7 +35,11 @@ This will help you get started with your code!
         <p class="p-4 my-3" style="font-size: 25px">We are a small clinic located in Smiths Falls Ontario</p>
         <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing the <strong>best</strong> care to our customers</p>
     </div>
-
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
     <table class="table table-info container-sm ">
         <thead>
             <tr>
@@ -49,11 +64,20 @@ This will help you get started with your code!
         </tbody>
     </table>
     <h1>Here is an alert!</h1>
+    <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
+    https://getbootstrap.com/docs/5.0/components/alerts/
+    -->
     <p>This indicated something important in the page</p>
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Yikes!</strong> Perhaps you left one of the fields empty for this to appear?
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+
+
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
 
     <h1>Meet the Physicians!</h1>
     <div class="row justify-content-around">
@@ -70,6 +94,11 @@ This will help you get started with your code!
             </div>
         </div>
     </div>
+
+    <!-- This example is using what is called an accordian, this is one of three examples
+    https://getbootstrap.com/docs/5.0/components/accordion/
+    -->
+
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
