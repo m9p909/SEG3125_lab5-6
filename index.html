@@ -40,27 +40,26 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     It is a good way to list of prices, or services in a business website
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
-    <table class="table table-info container-sm ">
+    <table class="table table-info table-hover">
         <thead>
             <tr>
                 <th scope="col"><h2>Service</h2></th>
                 <th scope="col"><h2>Description</h2></th>
             </tr>
-            <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
-            </tr>
         </thead>
         <tbody>
-
+            <tr>
+                <td>Placeholder 1</td>
+                <td>Placeholder 2</td>
+            </tr>
+            <tr>
+                <td>Placeholder 1</td>
+                <td>Placeholder 2</td>
+            </tr>
+            <tr>
+                <td>Placeholder 1</td>
+                <td>Placeholder 2</td>
+            </tr>
         </tbody>
     </table>
     <h1>Here is an alert!</h1>
@@ -73,6 +72,57 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
+    <h1>Button States</h1>
+    <!--
+    Buttons can be used for submitting forms, triggering events among many other things.
+    https://getbootstrap.com/docs/5.0/components/buttons/
+    -->
+
+    <button type="button" class="btn btn-warning">Primary Button</button>
+    <button type="button" class="btn btn-warning active">Active Button</button>
+    <button type="button" class="btn btn-warning" disabled>Disabled Button</button>
+
+    <h1>Modal Example</h1>
+
+    <!-- Button trigger modal
+    We use the same button code from above, but now we can trigger a modal to appear.
+    The bootstrap tutorial includes many different types of modals that you can explore
+    https://getbootstrap.com/docs/5.0/components/modal/
+    -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    In the body we can add various components. In this example some radio buttons
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            No
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Cards are quite useful when building a website. They are a useful way to organize information.
     They can be organized using a CSS grid or other layout options.
@@ -92,6 +142,22 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             <div class="card-body">
                 <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
             </div>
+        </div>
+    </div>
+
+    <!--
+    We can also use buttons to expand some hidden options
+    https://getbootstrap.com/docs/5.0/components/collapse/
+    -->
+    <h1>More Information</h1>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button To Expand Options
+    </button>
+
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Here we have some hidden data to avoid cluttering the page with information
         </div>
     </div>
 
