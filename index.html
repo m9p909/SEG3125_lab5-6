@@ -24,135 +24,444 @@ I store all of the page information in a container,
 Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
 -->
     <div class="container-lg">
-      <nav class="navbar navbar-light bg-light">
+      <nav class="navbar navbar-light">
         <h1>Bill's Dietician Services</h1>
         <h3>221B Baker Street, London, UK</h3>
       </nav>
       <div class="about">
-        <p class="h3">About</p>
+        <p class="h3 section-title">About</p>
         <p>
           Bill's Dietician Services have been around since the 1890s, teaching
           famous detectives and old war veterans how to keep their bodies
           healthy.
         </p>
         <p></p>
-        <p class="h5">Reviews</p>
+        <p class="h3 section-title">Reviews</p>
         <p>
-          Wow, people were calling me "The Final Problem" because I could not
-          lose weight. Thanks to Bill, I can go back to eating the my favorite
-          dish "The Hound of Baskervilles"
+          "Wow, people were calling me "The Final Problem" because I could not
+          lose weight. Thanks to Bill, I can go back to eating my favorite dish
+          "The Hound of Baskervilles"" - The Final Problem
         </p>
       </div>
       <div class="services">
-        <p class="h3">Services</p>
+        <p class="h3 section-title">Services</p>
         <!-- Used from bootstrap website examples, not entirely my own work -->
-        <div id="accordion">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button
-                  class="btn btn-link"
-                  data-toggle="collapse"
-                  data-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  Collapsible Group Item #1
-                </button>
-              </h5>
-            </div>
-
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Meal Planning
+              </button>
+            </h2>
             <div
               id="collapseOne"
-              class="collapse show"
+              class="accordion-collapse collapse show"
               aria-labelledby="headingOne"
-              data-parent="#accordion"
+              data-bs-parent="#accordionExample"
             >
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
-              </div>
+              <p>Need help with your new diet?</p>
+              <p></p>
+              <p>
+                No Need! Our Meal planning services will keep you energetic on a
+                7 percent solution of cocain injected intravenously into your
+                body
+              </p>
+              <div class="accordion-body"></div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button
-                  class="btn btn-link collapsed"
-                  data-toggle="collapse"
-                  data-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  Collapsible Group Item #2
-                </button>
-              </h5>
-            </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                LSD Specialists
+              </button>
+            </h2>
             <div
               id="collapseTwo"
-              class="collapse"
+              class="accordion-collapse collapse"
               aria-labelledby="headingTwo"
-              data-parent="#accordion"
+              data-bs-parent="#accordionExample"
             >
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
+              <p>
+                Have stick figures shown up on the window sill of your house? No
+                idea how they got there?
+              </p>
+              <p>
+                Well don't worry, we're on the case. We'll find any sort of
+                hidden LSD in your home, in your partner or in your kids.
+                Guaranteed!
+              </p>
+              <div class="accordion-body"></div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Allergy Detective Services
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>Do you think you're allergic?</p>
+                <p>Does eating wheat make your belly ache?</p>
+                <p>Did milk cause you to have a "Scandal in Bohemia"?</p>
+                <p>
+                  Then you should contact our Doctors. They are real experts at
+                  solving these mysteries.
+                </p>
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button
-                  class="btn btn-link collapsed"
-                  data-toggle="collapse"
-                  data-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  Collapsible Group Item #3
-                </button>
-              </h5>
-            </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Have I been Poisoned Hotline
+              </button>
+            </h2>
             <div
-              id="collapseThree"
-              class="collapse"
-              aria-labelledby="headingThree"
-              data-parent="#accordion"
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample"
             >
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
+              <div class="accordion-body">
+                <p>Have I been poisoned?</p>
+                <p>
+                  Did I just lose a game of chance with the taxi driver that
+                  made me swallow poison?
+                </p>
+                <p>
+                  If so, then please call 0118-999-881-999-119-7253 to get
+                  immediate assistance.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                Shop With Your Dietician
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  Our dietician will give you a curated tour of the supermarket.
+                  Pointing out all the good foods and the bad foods.
+                </p>
+                <p>
+                  <strong> Limited Time Only </strong> Go shopping with our
+                  greek food specialist, you could even say he's "The Greek
+                  Interpreter"
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="doctors">
+        <p class="h3 section-title">Doctors</p>
+        <div class="d-flex flex-wrap">
+          <div class="card doctor">
+            <img
+              src="https://www.arthur-conan-doyle.com/images/a/a4/Granada-gree-4-Mr-Melas.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dr. Melas</h5>
+              <p class="card-text">
+                Dr. Melas is our local "Greek Interpreter". He'll get you on
+                your clean, healthy no frills diet in no time. Just watch out
+                for the olives!
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Schedule
+              </button>
+            </div>
+          </div>
+          <div class="card doctor">
+            <img
+              src="https://conandoyleestate.com/images/characters/sherlock-holmes.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dr. Holmes</h5>
+              <p class="card-text">
+                Dr. Holmes is a world class detective-doctor. He will solve the
+                crime of you vitamin deficiencies.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Schedule
+              </button>
+            </div>
+          </div>
+          <div class="card doctor">
+            <img
+              src="https://img.republicworld.com/republic-prod/stories/images/15762366905df3769233bb9.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dr. Watson</h5>
+              <p class="card-text">
+                Dr. Watson is a retired army doctor who knows his stuff. He's an
+                excellent listener and keeps detailed notes.
+              </p>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Schedule
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="width: 100%">
+        <small>
+          We have a judicial responsibility to report any illicit drug use to
+          the police
+        </small>
+      </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Shop With Me!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div id="services">
+                <p>Select from one or more of our services</p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="MealPlanning"
+                  />
+                  <label class="form-check-label" for="MealPlanning">
+                    Meal Planning
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="LSD"
+                  />
+                  <label class="form-check-label" for="LSD">
+                    LSD Specialists
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="AllergyDetective"
+                  />
+                  <label class="form-check-label" for="AllergyDetective">
+                    Allergy Detective Services
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="poisoned"
+                  />
+                  <label class="form-check-label" for="Poisoned">
+                    Have I been Poisoned?
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="AllergyDetective"
+                  />
+                  <label class="form-check-label" for="AllergyDetective">
+                    Shop with your Dietician
+                  </label>
+                </div>
+                <div id="Doctor">
+                  <p>Select a doctor</p>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="melas"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label" for="melas">
+                      Dr. Melas (Greek Interpreter)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="holmes"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="holmes">
+                      Dr. Holmes (Nutrition Detective)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="watson"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="watson">
+                      Dr. Watson (Nice Guy)
+                    </label>
+                  </div>
+                </div>
+                <div id="date">
+                  <p>Select the date and time you would like to book</p>
+                  <select class="form-select" aria-label="Select Date">
+                    <option selected>Pick a Date</option>
+                    <option value="1">Jan 27th 1890</option>
+                    <option value="2">Jan 28th 1890</option>
+                    <option value="3">Jan 29th 1890</option>
+                  </select>
+                  <select class="form-select">
+                    <option selected>Pick a time</option>
+                    <option value="1">8 am</option>
+                    <option value="2">9 am</option>
+                    <option value="3">13 am</option>
+                  </select>
+                </div>
+                <div id="contact">
+                  <p>Contact Info</p>
+                  <label for="Mycroft"> First Name </label>
+                  <br />
+                  <input placeholder="John" />
+                  <br />
+                  <label for="lastname"> Last Name </label>
+                  <br />
+                  <input placeholder="Doe" />
+                  <br />
+                  <label for="lastname"> Age</label>
+                  <br />
+                  <input placeholder="23" />
+                  <br />
+                  <label for="lastname">Height</label>
+                  <br />
+                  <input placeholder="2 feet" />
+                  <br />
+                  <label for=""> Phone Number </label>
+                  <br />
+                  <input placeholder="999-999-9999" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Schedule Meeting
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

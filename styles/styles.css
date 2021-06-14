@@ -1,10 +1,61 @@
-td{
-    font-size: 25px;
+td {
+  font-size: 25px;
 }
-p{
-    font-size: 20px;
+p {
+  font-size: 20px;
 }
-.btn{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.doctor {
+  width: 18rem;
+  margin: 1rem;
+}
+
+:root {
+  --blue: #c1f7dc;
+  --purple: #a6b1e1;
+  --brown: #9f7e69;
+  --green: #25291c;
+  --liberty: #4a5899;
+}
+
+nav {
+  background: var(--brown);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+body {
+  background: var(--blue);
+}
+.btn {
+  background: var(--liberty);
+  border: var(--liberty);
+}
+
+.section-title {
+  background: var(--green);
+  border-radius: 0.5rem;
+  color: white;
+  padding: 0.5rem;
+}
+.doctors {
+  padding-top: 1rem;
+}
+.accordion-button {
+  background: var(--purple);
+  border: var(--purple);
+}
+.accordion-header {
+  border: var(--purple);
+  background: var(--purple);
+}
+.accordion-item {
+  background: var(--purple);
+}
+.card {
+  background: var(--purple);
 }
