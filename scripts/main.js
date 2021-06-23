@@ -31,6 +31,7 @@ function onNextClick() {
   } else if (tab == "Payment") {
     tab = "Services";
     $("#nextButton").text("Schedule Appointment");
+    
   }
 }
 
