@@ -14,30 +14,30 @@ p {
 }
 
 :root {
-  --blue: #c1f7dc;
-  --purple: #a6b1e1;
-  --brown: #9f7e69;
-  --green: #25291c;
-  --liberty: #4a5899;
+  --mainbackground: #ffffff;
+  --card-background: #ebebeb;
+  --nav-background: #ebebeb;
+  --header-background: #4062bb;
+  --default-button: #4062bb;
 }
 
 nav {
-  background: var(--brown);
-  color: white;
+  background: var(--nav-background);
+  color: black;
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin: 0.5rem;
 }
 body {
-  background: var(--blue);
+  background: var(--mainbackground);
 }
 .btn {
-  background: var(--liberty);
-  border: var(--liberty);
+  background: var(--default-button);
+  border: var(--default-button);
 }
 
 .section-title {
-  background: var(--green);
+  background: var(--header-background);
   border-radius: 0.5rem;
   color: white;
   padding: 0.5rem;
@@ -46,16 +46,20 @@ body {
   padding-top: 1rem;
 }
 .accordion-button {
-  background: var(--purple);
-  border: var(--purple);
+  background: var(--card-background);
+  border: var(--card-background);
 }
 .accordion-header {
-  border: var(--purple);
-  background: var(--purple);
+  border: var(--card-background);
+  background: var(--card-background);
 }
 .accordion-item {
-  background: var(--purple);
+  background: var(--card-background);
 }
 .card {
-  background: var(--purple);
+  background: var(--card-background);
+}
+
+.close {
+  background: gray;
 }

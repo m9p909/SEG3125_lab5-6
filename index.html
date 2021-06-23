@@ -15,6 +15,12 @@ This will help you get started with your code!
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/main.js"></script>
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
     <title>Module 4 Lab</title>
   </head>
@@ -224,8 +230,10 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                name="melas"
+                btn-type="doctorSelection"
               >
-                Schedule
+                Book an Appointment
               </button>
             </div>
           </div>
@@ -246,8 +254,10 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                name="holmes"
+                btn-type="doctorSelection"
               >
-                Schedule
+                Book an Appointment
               </button>
             </div>
           </div>
@@ -269,14 +279,16 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                name="watson"
+                btn-type="doctorSelection"
               >
-                Schedule
+                Book an Appointment
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="text-center" style="width: 100%">
+      <div class="text-center" style="width: 100%;">
         <small>
           We have a judicial responsibility to report any illicit drug use to
           the police
@@ -302,7 +314,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" #Services>
             <form>
               <div id="services">
                 <p>Select from one or more of our services</p>
@@ -368,9 +380,9 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="exampleRadios"
+                      name="dieticianSelection"
                       id="melas"
-                      value="option1"
+                      value="melas"
                       checked
                     />
                     <label class="form-check-label" for="melas">
@@ -381,7 +393,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="exampleRadios"
+                      name="dieticianSelection"
                       id="holmes"
                       value="option2"
                     />
@@ -393,65 +405,74 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="exampleRadios"
+                      name="dieticianSelection"
                       id="watson"
-                      value="option2"
+                      value="watson"
                     />
                     <label class="form-check-label" for="watson">
                       Dr. Watson (Nice Guy)
                     </label>
                   </div>
                 </div>
-                <div id="date">
-                  <p>Select the date and time you would like to book</p>
-                  <select class="form-select" aria-label="Select Date">
-                    <option selected>Pick a Date</option>
-                    <option value="1">Jan 27th 1890</option>
-                    <option value="2">Jan 28th 1890</option>
-                    <option value="3">Jan 29th 1890</option>
-                  </select>
-                  <select class="form-select">
-                    <option selected>Pick a time</option>
-                    <option value="1">8 am</option>
-                    <option value="2">9 am</option>
-                    <option value="3">13 am</option>
-                  </select>
-                </div>
-                <div id="contact">
-                  <p>Contact Info</p>
-                  <label for="Mycroft"> First Name </label>
-                  <br />
-                  <input placeholder="John" />
-                  <br />
-                  <label for="lastname"> Last Name </label>
-                  <br />
-                  <input placeholder="Doe" />
-                  <br />
-                  <label for="lastname"> Age</label>
-                  <br />
-                  <input placeholder="23" />
-                  <br />
-                  <label for="lastname">Height</label>
-                  <br />
-                  <input placeholder="2 feet" />
-                  <br />
-                  <label for=""> Phone Number </label>
-                  <br />
-                  <input placeholder="999-999-9999" />
-                </div>
-              </div>
+              
             </form>
           </div>
+          <div class="modal-body" #Contact>
+            <form>
+                <div id="date">
+                    <p>Select the date and time you would like to book</p>
+                    <select class="form-select" aria-label="Select Date">
+                      <option selected>Pick a Date</option>
+                      <option value="1">Jan 27th 1890</option>
+                      <option value="2">Jan 28th 1890</option>
+                      <option value="3">Jan 29th 1890</option>
+                    </select>
+                    <select class="form-select">
+                      <option selected>Pick a time</option>
+                      <option value="1">8 am</option>
+                      <option value="2">9 am</option>
+                      <option value="3">13 am</option>
+                    </select>
+                  </div>
+                  <div id="contact">
+                    <p>Contact Info</p>
+                    <label for="Mycroft"> First Name </label>
+                    <br />
+                    <input placeholder="John" />
+                    <br />
+                    <label for="lastname"> Last Name </label>
+                    <br />
+                    <input placeholder="Doe" />
+                    <br />
+                    <label for="lastname"> Age</label>
+                    <br />
+                    <input placeholder="23" />
+                    <br />
+                    <label for="lastname">Height</label>
+                    <br />
+                    <input placeholder="2 feet" />
+                    <br />
+                    <label for=""> Phone Number </label>
+                    <br />
+                    <input placeholder="999-999-9999" />
+                  </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-body" #Payment>
+              <form>
+              </form>
+            </div>
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-secondary close"
               data-bs-dismiss="modal"
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">
-              Schedule Meeting
+            <button type="button" class="btn btn-primary" id="nextButton">
+              Next
             </button>
           </div>
         </div>
