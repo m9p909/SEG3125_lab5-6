@@ -307,9 +307,9 @@ This will help you get started with your code!
         </div>
         <div class="modal-body" id="contact">
           <form>
-            <div id="date">
+            <div>
               <p>Select the date and time you would like to book</p>
-              <input type="date" id="date"></input>
+              <input type="date" id="date"></input> <span id="unavailableDates"></span>
               <select class="form-select mt-2">
                 <option selected="true">Pick a time</option>
                 <option value="1">8 am</option>
@@ -337,12 +337,12 @@ This will help you get started with your code!
               <br />
               <label for="phone"> Phone Number </label>
               <br />
-              <input id="phone" name="phone" />
+              <input id="phone" name="phone" /> <span> Should look like: 111-111-1111</span>
               <div id="invalidphone">
                 <span class="invalid"> Phone Number is Invalid</span>
               </div>
               <div id="invaliddate">
-                <span class="invalid"> Date is Invalid</span>
+                <span class="invalid"> Date is Unavailable </span>
               </div>
             </div>
           </form>
@@ -351,7 +351,7 @@ This will help you get started with your code!
           <form>
             <label>Credit Card Number</label>
             <br />
-            <input id="cc" />
+            <input id="cc" /> <span data-bs-toggle="tooltip" data-bs-placement="top" title="Needs an actual valid credit card">Example: 4724090200100001</span>
             <br />
             <label>
               CVC Number
@@ -374,7 +374,7 @@ This will help you get started with your code!
           <p>With Doctor: <span id="doctorpicked"></span></p>
           <p>Patient: <span id="patientpicked"></span></p>
           <p>Date: <span id="datepicked"></span></p>
-          <p>Time: <span id="datepicked"></span></p>
+          <p>Time: <span id="timepicked"></span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">

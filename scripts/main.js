@@ -1,9 +1,25 @@
+// enable tooltips everywhere
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
 const debug = true;
 //tabs enum
 const TabsEnum = {payment: 1, contact: 2, services: 3, confirmation: 4};
 Object.freeze(TabsEnum);
 // current state of input modal
 let tab = TabsEnum.services;
+
+const selectors = {
+  picked: {
+    services: "#servicespicked",
+    doctor: "#doctorpicked",
+    patient: "#patientpicked",
+    date: "#datepicked",
+    time: "#timepicked"
+  }
+}
 
 const servicesSelector = "#modalservices";
 const paymentSelector = "#payment";
@@ -22,6 +38,14 @@ const invalidPhoneSelector = "#invalidphone";
 const invalidCCSelector = "#invalidcc";
 const invalidCVCSelector = "#invalidcvc";
 const invalidDateSelector = "#invaliddate";
+/*
+          <p>Services Picked: <span id="servicespicked"></span></p>
+          <p>With Doctor: <span id="doctorpicked"></span></p>
+          <p>Patient: <span id="patientpicked"></span></p>
+          <p>Date: <span id="datepicked"></span></p>
+          <p>Time: <span id="datepicked"></span></p>
+          */
+const servicesConfirmSelector = "servicespicked"
 
 $(document).ready(() => {
   $("[btn-type='doctorSelection']").on("click", onDoctorSelectionClick);
@@ -93,6 +117,7 @@ function displayServices() {
   $(nextButtonSelector).show("Next");
   $(previousButtonSelector).hide();
   tab = TabsEnum.services;
+  setNextDisabled()
 }
 
 function displayContact() {
@@ -180,7 +205,7 @@ function checkPhoneNumber(number) {
 }
 
 function checkDate(date) {
-  console.log(date);
+  console.log("date: "+ date);
   dateIsValid = true;
   return dateIsValid;
 }
@@ -188,7 +213,13 @@ function checkDate(date) {
 // on form change functions
 
 function genericOnChange(inputSelector, checkFunction, invalidSelector) {
-  const currValue = $(inputSelector).val();
+  let currValue
+  if($(inputSelector).attr("type") == "date"){
+     currValue = new Date($(inputSelector).val());
+  } else{
+    currValue = $(inputSelector).val();
+  }
+
   const boolean = checkFunction(currValue)
   if (boolean) {
     $(invalidSelector).hide();
