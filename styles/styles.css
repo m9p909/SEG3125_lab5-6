@@ -1,3 +1,4 @@
+
 td {
   font-size: 25px;
 }
@@ -24,9 +25,6 @@ p {
 nav {
   background: var(--nav-background);
   color: black;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
 }
 body {
   background: var(--mainbackground);
@@ -62,4 +60,25 @@ body {
 
 .close {
   background: gray;
+}
+
+.section-title::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -285px; 
+  height: 285px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
+body {
+  padding-top: 65px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.invalid{
+  color:red;
 }

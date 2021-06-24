@@ -4,485 +4,397 @@ https://getbootstrap.com/docs/5.0/getting-started/introduction/
 This will help you get started with your code!
 -->
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="scripts/main.js"></script>
-    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
-    <title>Module 4 Lab</title>
-  </head>
-  <body>
-    <!--
-I store all of the page information in a container,
-Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
--->
-    <div class="container-lg">
-      <nav class="navbar navbar-light">
-        <h1>Bill's Dietician Services</h1>
-        <h3>221B Baker Street, London, UK</h3>
-      </nav>
-      <div class="about">
-        <p class="h3 section-title">About</p>
-        <p>
-          Bill's Dietician Services have been around since the 1890s, teaching
-          famous detectives and old war veterans how to keep their bodies
-          healthy.
-        </p>
-        <p></p>
-        <p class="h3 section-title">Reviews</p>
-        <p>
-          "Wow, people were calling me "The Final Problem" because I could not
-          lose weight. Thanks to Bill, I can go back to eating my favorite dish
-          "The Hound of Baskervilles"" - The Final Problem
-        </p>
-      </div>
-      <div class="services">
-        <p class="h3 section-title">Services</p>
-        <!-- Used from bootstrap website examples, not entirely my own work -->
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Meal Planning
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
-            >
-              <p>Need help with your new diet?</p>
-              <p></p>
-              <p>
-                No Need! Our Meal planning services will keep you energetic on a
-                7 percent solution of cocain injected intravenously into your
-                body
-              </p>
-              <div class="accordion-body"></div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                LSD Specialists
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#accordionExample"
-            >
-              <p>
-                Have stick figures shown up on the window sill of your house? No
-                idea how they got there?
-              </p>
-              <p>
-                Well don't worry, we're on the case. We'll find any sort of
-                hidden LSD in your home, in your partner or in your kids.
-                Guaranteed!
-              </p>
-              <div class="accordion-body"></div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                Allergy Detective Services
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingThree"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <p>Do you think you're allergic?</p>
-                <p>Does eating wheat make your belly ache?</p>
-                <p>Did milk cause you to have a "Scandal in Bohemia"?</p>
-                <p>
-                  Then you should contact our Doctors. They are real experts at
-                  solving these mysteries.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                Have I been Poisoned Hotline
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <p>Have I been poisoned?</p>
-                <p>
-                  Did I just lose a game of chance with the taxi driver that
-                  made me swallow poison?
-                </p>
-                <p>
-                  If so, then please call 0118-999-881-999-119-7253 to get
-                  immediate assistance.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
-                Shop With Your Dietician
-              </button>
-            </h2>
-            <div
-              id="collapseFive"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFive"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <p>
-                  Our dietician will give you a curated tour of the supermarket.
-                  Pointing out all the good foods and the bad foods.
-                </p>
-                <p>
-                  <strong> Limited Time Only </strong> Go shopping with our
-                  greek food specialist, you could even say he's "The Greek
-                  Interpreter"
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="doctors">
-        <p class="h3 section-title">Doctors</p>
-        <div class="d-flex flex-wrap">
-          <div class="card doctor">
-            <img
-              src="https://www.arthur-conan-doyle.com/images/a/a4/Granada-gree-4-Mr-Melas.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Dr. Melas</h5>
-              <p class="card-text">
-                Dr. Melas is our local "Greek Interpreter". He'll get you on
-                your clean, healthy no frills diet in no time. Just watch out
-                for the olives!
-              </p>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                name="melas"
-                btn-type="doctorSelection"
-              >
-                Book an Appointment
-              </button>
-            </div>
-          </div>
-          <div class="card doctor">
-            <img
-              src="https://conandoyleestate.com/images/characters/sherlock-holmes.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Dr. Holmes</h5>
-              <p class="card-text">
-                Dr. Holmes is a world class detective-doctor. He will solve the
-                crime of you vitamin deficiencies.
-              </p>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                name="holmes"
-                btn-type="doctorSelection"
-              >
-                Book an Appointment
-              </button>
-            </div>
-          </div>
-          <div class="card doctor">
-            <img
-              src="https://img.republicworld.com/republic-prod/stories/images/15762366905df3769233bb9.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Dr. Watson</h5>
-              <p class="card-text">
-                Dr. Watson is a retired army doctor who knows his stuff. He's an
-                excellent listener and keeps detailed notes.
-              </p>
-              <!-- Button trigger modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                name="watson"
-                btn-type="doctorSelection"
-              >
-                Book an Appointment
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center" style="width: 100%;">
-        <small>
-          We have a judicial responsibility to report any illicit drug use to
-          the police
-        </small>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Shop With Me!</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body" #Services>
-            <form>
-              <div id="services">
-                <p>Select from one or more of our services</p>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="MealPlanning"
-                  />
-                  <label class="form-check-label" for="MealPlanning">
-                    Meal Planning
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="LSD"
-                  />
-                  <label class="form-check-label" for="LSD">
-                    LSD Specialists
-                  </label>
-                </div>
 
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="AllergyDetective"
-                  />
-                  <label class="form-check-label" for="AllergyDetective">
-                    Allergy Detective Services
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="poisoned"
-                  />
-                  <label class="form-check-label" for="Poisoned">
-                    Have I been Poisoned?
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="AllergyDetective"
-                  />
-                  <label class="form-check-label" for="AllergyDetective">
-                    Shop with your Dietician
-                  </label>
-                </div>
-                <div id="Doctor">
-                  <p>Select a doctor</p>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="dieticianSelection"
-                      id="melas"
-                      value="melas"
-                      checked
-                    />
-                    <label class="form-check-label" for="melas">
-                      Dr. Melas (Greek Interpreter)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="dieticianSelection"
-                      id="holmes"
-                      value="option2"
-                    />
-                    <label class="form-check-label" for="holmes">
-                      Dr. Holmes (Nutrition Detective)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="dieticianSelection"
-                      id="watson"
-                      value="watson"
-                    />
-                    <label class="form-check-label" for="watson">
-                      Dr. Watson (Nice Guy)
-                    </label>
-                  </div>
-                </div>
-              
-            </form>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <script src="scripts/main.js"></script>
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet"
+    type="text/css" />
+
+  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+  <title>Module 4 Lab</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand">Bill's Dietician Clinic</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#doctors">Doctors</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<body>
+  <div class="container-lg">
+    <div class="about" id="about">
+      <p class="h3 section-title">About</p>
+      <p>
+        Bill's Dietician Services have been around since the 1890s, teaching
+        famous detectives and old war veterans how to keep their bodies
+        healthy.
+
+      </p>
+      <p></p>
+      <p class="h3 section-title" id="reviews">Reviews</p>
+      <p>
+        "Wow, people were calling me "The Final Problem" because I could not
+        lose weight. Thanks to Bill, I can go back to eating my favorite dish
+        "The Hound of Baskervilles"" - The Final Problem
+      </p>
+    </div>
+    <div class="services" id="services">
+      <p class="h3 section-title">Services</p>
+      <!-- Used from bootstrap website examples, not entirely my own work -->
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Meal Planning
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <p>Need help with your new diet?</p>
+            <p></p>
+            <p>
+              No Need! Our Meal planning services will keep you energetic on a
+              7 percent solution of cocain injected intravenously into your
+              body
+            </p>
+            <div class="accordion-body"></div>
           </div>
-          <div class="modal-body" #Contact>
-            <form>
-                <div id="date">
-                    <p>Select the date and time you would like to book</p>
-                    <select class="form-select" aria-label="Select Date">
-                      <option selected>Pick a Date</option>
-                      <option value="1">Jan 27th 1890</option>
-                      <option value="2">Jan 28th 1890</option>
-                      <option value="3">Jan 29th 1890</option>
-                    </select>
-                    <select class="form-select">
-                      <option selected>Pick a time</option>
-                      <option value="1">8 am</option>
-                      <option value="2">9 am</option>
-                      <option value="3">13 am</option>
-                    </select>
-                  </div>
-                  <div id="contact">
-                    <p>Contact Info</p>
-                    <label for="Mycroft"> First Name </label>
-                    <br />
-                    <input placeholder="John" />
-                    <br />
-                    <label for="lastname"> Last Name </label>
-                    <br />
-                    <input placeholder="Doe" />
-                    <br />
-                    <label for="lastname"> Age</label>
-                    <br />
-                    <input placeholder="23" />
-                    <br />
-                    <label for="lastname">Height</label>
-                    <br />
-                    <input placeholder="2 feet" />
-                    <br />
-                    <label for=""> Phone Number </label>
-                    <br />
-                    <input placeholder="999-999-9999" />
-                  </div>
-                </div>
-            </form>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              LSD Specialists
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <p>
+              Have stick figures shown up on the window sill of your house? No
+              idea how they got there?
+            </p>
+            <p>
+              Well don't worry, we're on the case. We'll find any sort of
+              hidden LSD in your home, in your partner or in your kids.
+              Guaranteed!
+            </p>
+            <div class="accordion-body"></div>
           </div>
-          <div class="modal-body" #Payment>
-              <form>
-              </form>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Allergy Detective Services
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Do you think you're allergic?</p>
+              <p>Does eating wheat make your belly ache?</p>
+              <p>Did milk cause you to have a "Scandal in Bohemia"?</p>
+              <p>
+                Then you should contact our Doctors. They are real experts at
+                solving these mysteries.
+              </p>
             </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary close"
-              data-bs-dismiss="modal"
-            >
-              Close
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Have I been Poisoned Hotline
             </button>
-            <button type="button" class="btn btn-primary" id="nextButton">
-              Next
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Have I been poisoned?</p>
+              <p>
+                Did I just lose a game of chance with the taxi driver that
+                made me swallow poison?
+              </p>
+              <p>
+                If so, then please call 0118-999-881-999-119-7253 to get
+                immediate assistance.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Shop With Your Dietician
             </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Our dietician will give you a curated tour of the supermarket.
+                Pointing out all the good foods and the bad foods.
+              </p>
+              <p>
+                <strong> Limited Time Only </strong> Go shopping with our
+                greek food specialist, you could even say he's "The Greek
+                Interpreter"
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="doctors" id="doctors">
+      <p class="h3 section-title">Doctors</p>
+      <div class="d-flex flex-wrap">
+        <div class="card doctor">
+          <img src="https://www.arthur-conan-doyle.com/images/a/a4/Granada-gree-4-Mr-Melas.jpg" class="card-img-top"
+            alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Melas</h5>
+            <p class="card-text">
+              Dr. Melas is our local "Greek Interpreter". He'll get you on
+              your clean, healthy no frills diet in no time. Just watch out
+              for the olives!
+            </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              name="melas" btn-type="doctorSelection">
+              Book an Appointment
+            </button>
+          </div>
+        </div>
+        <div class="card doctor">
+          <img src="https://conandoyleestate.com/images/characters/sherlock-holmes.jpg" class="card-img-top"
+            alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Holmes</h5>
+            <p class="card-text">
+              Dr. Holmes is a world class detective-doctor. He will solve the
+              crime of your vitamin deficiencies.
+            </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              name="holmes" btn-type="doctorSelection">
+              Book an Appointment
+            </button>
+          </div>
+        </div>
+        <div class="card doctor">
+          <img src="https://img.republicworld.com/republic-prod/stories/images/15762366905df3769233bb9.jpg"
+            class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Watson</h5>
+            <p class="card-text">
+              Dr. Watson is a retired army doctor who knows his stuff. He's an
+              excellent listener and keeps detailed notes.
+            </p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              name="watson" btn-type="doctorSelection">
+              Book an Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="h3 section-title">Contact Us</p>
+      <p>
+      <p> 221B Baker Street <br />London, UK </p>
+      <p> phone: 613-737-1111</p>
+      </p>
+      <p></p>
+    </div>
+    <div class="text-center" style="width: 100%">
+      <small>
+        We have a judicial responsibility to report any illicit drug use to
+        the police
+      </small>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Shop With Me!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalservices">
+          <form>
+            <div>
+              <p>Select from one or more of our services</p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="MealPlanning" />
+                <label class="form-check-label" for="MealPlanning">
+                  Meal Planning
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="LSD" />
+                <label class="form-check-label" for="LSD">
+                  LSD Specialists
+                </label>
+              </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="AllergyDetective" />
+                <label class="form-check-label" for="AllergyDetective">
+                  Allergy Detective Services
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="poisoned" />
+                <label class="form-check-label" for="Poisoned">
+                  Have I been Poisoned?
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="AllergyDetective" />
+                <label class="form-check-label" for="AllergyDetective">
+                  Shop with your Dietician
+                </label>
+              </div>
+              <div id="Doctor">
+                <p>Select a doctor</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dieticianSelection" id="melas" value="melas"
+                    checked="true" />
+                  <label class="form-check-label" for="melas">
+                    Dr. Melas (Greek Interpreter)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dieticianSelection" id="holmes" value="option2" />
+                  <label class="form-check-label" for="holmes">
+                    Dr. Holmes (Nutrition Detective)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dieticianSelection" id="watson" value="watson" />
+                  <label class="form-check-label" for="watson">
+                    Dr. Watson (Nice Guy)
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-body" id="contact">
+          <form>
+            <div id="date">
+              <p>Select the date and time you would like to book</p>
+              <input type="date" id="date"></input>
+              <select class="form-select mt-2">
+                <option selected="true">Pick a time</option>
+                <option value="1">8 am</option>
+                <option value="2">9 am</option>
+                <option value="3">13 am</option>
+              </select>
+            </div>
+            <div id="contact">
+              <p>Contact Info</p>
+              <label for="Mycroft"> First Name </label>
+              <br />
+              <input placeholder="John" />
+              <br />
+              <label for="lastname"> Last Name </label>
+              <br />
+              <input placeholder="Doe" />
+              <br />
+              <label for="lastname"> Age</label>
+              <br />
+              <input placeholder="23" />
+              <br />
+              <label for="lastname">Height</label>
+              <br />
+              <input placeholder="2 feet" />
+              <br />
+              <label for="phone"> Phone Number </label>
+              <br />
+              <input id="phone" name="phone" />
+              <div id="invalidphone">
+                <span class="invalid"> Phone Number is Invalid</span>
+              </div>
+              <div id="invaliddate">
+                <span class="invalid"> Date is Invalid</span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-body" id="payment">
+          <form>
+            <label>Credit Card Number</label>
+            <br />
+            <input id="cc" />
+            <br />
+            <label>
+              CVC Number
+            </label>
+            <br />
+            <input id="cvc" />
+            <div id="invalidcc">
+
+              <span class="invalid"> Credit Card is Invalid</span>
+            </div>
+            <div id="invalidcvc">
+
+              <span class="invalid"> CVC is Invalid</span>
+            </div>
+          </form>
+        </div>
+        <div class="modal-body" id="confirm">
+        <p class="h3">Appointement booked!</p>
+          <p>Services Picked: <span id="servicespicked"></span></p>
+          <p>With Doctor: <span id="doctorpicked"></span></p>
+          <p>Patient: <span id="patientpicked"></span></p>
+          <p>Date: <span id="datepicked"></span></p>
+          <p>Time: <span id="datepicked"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" id="prevButton">
+            Back
+          </button>
+          <button type="button" class="btn btn-primary" id="nextButton">
+            Next
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
