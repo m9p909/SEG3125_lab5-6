@@ -1,12 +1,14 @@
 // enable tooltips everywhere
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});
 
 const debug = true;
 //tabs enum
-const TabsEnum = {payment: 1, contact: 2, services: 3, confirmation: 4};
+const TabsEnum = { payment: 1, contact: 2, services: 3, confirmation: 4 };
 Object.freeze(TabsEnum);
 // current state of input modal
 let tab = TabsEnum.services;
@@ -17,14 +19,18 @@ const selectors = {
     doctor: "#doctorpicked",
     patient: "#patientpicked",
     date: "#datepicked",
-    time: "#timepicked"
-  }
-}
+    time: "#timepicked",
+  },
+	contact: {
+		firstname: "#firstname",
+		lastname: "#lastname"
+	}
+};
 
 const servicesSelector = "#modalservices";
 const paymentSelector = "#payment";
 const contactSelector = "#contact";
-const confirmSelector = "#confirm"
+const confirmSelector = "#confirm";
 
 const nextButtonSelector = "#nextButton";
 const previousButtonSelector = "#prevButton";
@@ -45,17 +51,17 @@ const invalidDateSelector = "#invaliddate";
           <p>Date: <span id="datepicked"></span></p>
           <p>Time: <span id="datepicked"></span></p>
           */
-const servicesConfirmSelector = "servicespicked"
+const servicesConfirmSelector = "servicespicked";
 
 $(document).ready(() => {
   $("[btn-type='doctorSelection']").on("click", onDoctorSelectionClick);
   $(nextButtonSelector).on("click", onNextClick);
   $(".close").on("click", onCloseClick);
   $(previousButtonSelector).on("click", onPrevClick);
-  $(ccSelector).on('change', onCcChange);
-  $(cvcSelector).on('change', onCVCChange);
-  $(phoneSelector).on('change', onPhoneNumberChange);
-  $(dateSelector).on('change', onDateChange);
+  $(ccSelector).on("change", onCcChange);
+  $(cvcSelector).on("change", onCVCChange);
+  $(phoneSelector).on("change", onPhoneNumberChange);
+  $(dateSelector).on("change", onDateChange);
   displayServices();
 });
 
@@ -80,8 +86,8 @@ function onNextClick() {
     displayPayment();
   } else if (tab == TabsEnum.payment) {
     displayConfirm();
-  } else if (tab == TabsEnum.confirmation){
-      throw new Error("there is no next tab");
+  } else if (tab == TabsEnum.confirmation) {
+    throw new Error("there is no next tab");
   }
   if (debug) {
     console.log("tab: " + tab);
@@ -96,15 +102,14 @@ function onPrevClick() {
     displayServices();
   } else if (tab == TabsEnum.payment) {
     displayContact();
-  } else if (tab == TabsEnum.confirmation){
+  } else if (tab == TabsEnum.confirmation) {
     throw new Error("can't go back");
-}
+  }
   setNextDisabled();
   if (debug) {
     console.log("tab: " + tab);
   }
 }
-
 
 function displayServices() {
   tab = TabsEnum.services;
@@ -117,7 +122,7 @@ function displayServices() {
   $(nextButtonSelector).show("Next");
   $(previousButtonSelector).hide();
   tab = TabsEnum.services;
-  setNextDisabled()
+  setNextDisabled();
 }
 
 function displayContact() {
@@ -144,21 +149,18 @@ function displayPayment() {
 }
 
 function displayConfirm() {
-    tab = TabsEnum.payment;
-    $(servicesSelector).hide();
-    $(contactSelector).hide();
-    $(paymentSelector).hide();
-    $(confirmSelector).show();
+  tab = TabsEnum.payment;
+  $(servicesSelector).hide();
+  $(contactSelector).hide();
+  $(paymentSelector).hide();
+  $(confirmSelector).show();
 
-    $(nextButtonSelector).attr("data-bs-dismiss", "modal");
-    $(nextButtonSelector).text("");
-    $(nextButtonSelector).hide();
+  $(nextButtonSelector).attr("data-bs-dismiss", "modal");
+  $(nextButtonSelector).text("");
+  $(nextButtonSelector).hide();
 
-    $(previousButtonSelector).hide();
-    
-  }
-
-
+  $(previousButtonSelector).hide();
+}
 
 function onCloseClick() {
   displayServices();
@@ -188,24 +190,25 @@ function isNumeric(str) {
 
 function checkCreditCard(ccnumber) {
   const ccRegex = new RegExp(creditCardRegex);
-  ccIsValid =  isNumeric(ccnumber) && ccRegex.test(ccnumber);
-  return ccIsValid
+  ccIsValid = isNumeric(ccnumber) && ccRegex.test(ccnumber);
+  return ccIsValid;
 }
 
 function checkCVC(cvc) {
-    cvcIsValid = cvc.length == 3 && isNumeric(cvc);
-    return cvcIsValid
+  cvcIsValid = cvc.length == 3 && isNumeric(cvc);
+  return cvcIsValid;
 }
 //from https://stackoverflow.com/questions/16699007/regular-expression-to-match-standard-10-digit-phone-number
-const phoneNumberRegex = "^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$";
+const phoneNumberRegex = "^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$";
 function checkPhoneNumber(number) {
   const phoneRegExp = new RegExp(phoneNumberRegex);
-  phoneIsValid =  phoneRegExp.test(number);
+  phoneIsValid = phoneRegExp.test(number);
   return phoneIsValid;
 }
 
 function checkDate(date) {
-  console.log("date: "+ date);
+  console.log("date: " + date);
+
   dateIsValid = true;
   return dateIsValid;
 }
@@ -213,51 +216,49 @@ function checkDate(date) {
 // on form change functions
 
 function genericOnChange(inputSelector, checkFunction, invalidSelector) {
-  let currValue
-  if($(inputSelector).attr("type") == "date"){
-     currValue = new Date($(inputSelector).val());
-  } else{
+  let currValue;
+  if ($(inputSelector).attr("type") == "date") {
+    currValue = new Date($(inputSelector).val());
+  } else {
     currValue = $(inputSelector).val();
   }
 
-  const boolean = checkFunction(currValue)
+  const boolean = checkFunction(currValue);
   if (boolean) {
     $(invalidSelector).hide();
-    
   } else {
     $(invalidSelector).show();
   }
-  setNextDisabled()
+  setNextDisabled();
 }
 
 function setNextDisabled() {
-    if(nextIsDisabled()){
-        $(nextButtonSelector).attr("disabled", "true")
-    } else {
-      $(nextButtonSelector).removeAttr("disabled");
-    }
+  if (nextIsDisabled()) {
+    $(nextButtonSelector).attr("disabled", "true");
+  } else {
+    $(nextButtonSelector).removeAttr("disabled");
+  }
 }
 
-
-function nextIsDisabled() { 
-    const contactsValid = phoneIsValid && dateIsValid;
-    if(tab == TabsEnum.contact){
-        return !contactsValid;
-    } 
-    if(tab == TabsEnum.payment){
-        return !contactsValid || !ccIsValid || !cvcIsValid;
-    }
-    else {
-        return false;
-    }
+function nextIsDisabled() {
+  const contactsValid = phoneIsValid && dateIsValid;
+  if (tab == TabsEnum.contact) {
+    return !contactsValid;
+  }
+  if (tab == TabsEnum.payment) {
+    return !contactsValid || !ccIsValid || !cvcIsValid;
+  } else {
+    return false;
+  }
 }
-
-
-
-
 
 function onPhoneNumberChange() {
-  genericOnChange(phoneSelector, checkPhoneNumber, invalidPhoneSelector, phoneIsValid);
+  genericOnChange(
+    phoneSelector,
+    checkPhoneNumber,
+    invalidPhoneSelector,
+    phoneIsValid
+  );
 }
 
 function onDateChange() {
@@ -271,3 +272,21 @@ function onCcChange() {
 function onCVCChange() {
   genericOnChange(cvcSelector, checkCVC, invalidCVCSelector, cvcIsValid);
 }
+
+// confirmation page
+let confirm = {
+  service,
+  doctor,
+  patient,
+  date,
+  time,
+};
+
+function setConfirm() {
+	confirm.service = $(servicesSelector).val();
+	confirm.doctor = $(doctorSelection).val();
+	confirm.patient = $(selectors.contact.firstname).val() + " " + $(selectors.contact.lastname).val();
+	confirm.date = new Date($(dateSelector).val());
+
+}
+
