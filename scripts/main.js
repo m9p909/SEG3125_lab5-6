@@ -21,10 +21,10 @@ const selectors = {
     date: "#datepicked",
     time: "#timepicked",
   },
-	contact: {
-		firstname: "#firstname",
-		lastname: "#lastname"
-	}
+  contact: {
+    firstname: "#firstname",
+    lastname: "#lastname",
+  },
 };
 
 const servicesSelector = "#modalservices";
@@ -160,6 +160,8 @@ function displayConfirm() {
   $(nextButtonSelector).hide();
 
   $(previousButtonSelector).hide();
+
+  setConfirm();
 }
 
 function onCloseClick() {
@@ -275,18 +277,26 @@ function onCVCChange() {
 
 // confirmation page
 let confirm = {
-  service,
-  doctor,
-  patient,
-  date,
-  time,
+	service: "",
+  doctor: "",
+  patient: "",
+  date: "",
+  time: "",
 };
 
 function setConfirm() {
-	confirm.service = $(servicesSelector).val();
-	confirm.doctor = $(doctorSelection).val();
-	confirm.patient = $(selectors.contact.firstname).val() + " " + $(selectors.contact.lastname).val();
-	confirm.date = new Date($(dateSelector).val());
-
+  confirm.service = $(servicesSelector).val();
+  confirm.doctor = $(doctorSelection).val();
+  confirm.patient =
+    $(selectors.contact.firstname).val() +
+    " " +
+    $(selectors.contact.lastname).val();
+  const bookedDate = new Date($(dateSelector).val());
+  confirm.date = bookedDate.toString();
+  confirm.time = $(selectors.contact.time).val();
+  $(selectors.picked.services).text(confirm.service);
+  $(selectors.picked.doctor).text(confirm.doctor);
+  $(selectors.picked.patient).text(confirm.patient);
+  $(selectors.picked.date).text(confirm.date);
+  $(selectors.picked.time).text(confirm.time);
 }
-
